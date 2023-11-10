@@ -5,11 +5,13 @@ const num = +input[1];
 let res = "";
 
 if (num >= str.length) {
-    console.log(str);
+    for (let i = str.length - 1; i >= 0; i--) {
+        res += str[i];
+    }
 }
 else {
     for (let i = str.length - 1; i > str.length - num - 1; i--) {
         res += str[i];
     }
-    console.log(res);
 }
+console.log(res);
