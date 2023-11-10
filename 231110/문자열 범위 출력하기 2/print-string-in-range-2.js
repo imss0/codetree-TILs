@@ -4,8 +4,12 @@ const str = input[0];
 const num = +input[1];
 let res = "";
 
-for (let i = str.length - 1; i > str.length - num - 1; i--) {
-    res += str[i];
+if (num >= str.length) {
+    console.log(str);
 }
-
-console.log(res);
+else {
+    for (let i = str.length - 1; i > str.length - num - 1; i--) {
+        res += str[i];
+    }
+    console.log(res);
+}
