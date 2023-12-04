@@ -3,7 +3,7 @@ const input = fs.readFileSync(0).toString().trim().split("\n");
 let str = input[0];
 let numbers = input.slice(1).map(Number);
 for (let i = 0; i < numbers.length; i++) {
-    if (numbers[i] > str.length) {
+    if (numbers[i] >= str.length) {
         str = str.slice(0, -1);
     }
     else {
