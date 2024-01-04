@@ -8,7 +8,11 @@ for (let i = 0; i < n; i++) {
     const type = queries[i][0];
     if (type === '1') {
         const [a, b] = [+queries[i][1], +queries[i][2]];
-        str = str.slice(0, a - 1) + str[b - 1] + str.slice(a, b - 1) + str[a - 1] + str.slice(b)
+        if (a < b) {
+            str = str.slice(0, a - 1) + str[b - 1] + str.slice(a, b - 1) + str[a - 1] + str.slice(b)
+        } else [
+            str = str.slice(0, b - 1) + str[a - 1] + str.slice(b, a - 1) + str[b - 1] + str.slice(a)
+        ]
         console.log(str)
     } 
     else {
@@ -17,5 +21,3 @@ for (let i = 0; i < n; i++) {
         console.log(str)
     }
 }
-
-// qejmvwpxrsvqepzalxbdo
