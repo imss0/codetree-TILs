@@ -11,7 +11,7 @@ for (let i = 1; i< arr.length; i++) {
 if (min === arr[0]) { res.push(1) }
 else {res.push(0)}
 
-if (arr[0] === arr[1] === arr[2]) {res.push(1)}
+if (arr[0] === arr[1] && arr[1]=== arr[2]) {res.push(1)}
 else {res.push(0)}
 
 console.log(res.join(" "))
