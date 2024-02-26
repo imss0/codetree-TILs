@@ -12,15 +12,7 @@ for (let i = 0; i < n1 - n2 + 1; i++) {
     let part = arr1.slice(i, i+n2);
     let res = 0;
     for (let j = 0; j < part.length; j++) {
-        if (part[j] === arr2[j]) {
-            // console.log('same')
-            res = res + 0;
-        }
-        else {
-            // console.log('diff')
-            res = res + 1;
-        }
-
+        if (part[j] !== arr2[j]) res = res + 1;
     }
     if (res === 0) result = 'Yes';
 }
