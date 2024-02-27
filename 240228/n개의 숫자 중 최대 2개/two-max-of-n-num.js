@@ -3,10 +3,11 @@ const inputs = fs.readFileSync(0).toString().trim().split("\n");
 const n = +inputs[0]
 const list = inputs[1].split(" ").map(Number);
 
-let max = list[0]
+let max = Number.MIN_SAFE_INTEGER;
 let second = Number.MIN_SAFE_INTEGER
 for (let i = 0; i < n; i++) {
-    if (list[i] > max) {
+    if (list[i] >= max) {
+        second = max; 
         max = list[i];
     }
     else if (list[i] >= second) {
