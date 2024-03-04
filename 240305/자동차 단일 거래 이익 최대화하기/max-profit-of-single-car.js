@@ -4,14 +4,14 @@ const n = +input[0]
 const prices = input[1].split(" ").map(Number);
 
 let max = 0;
+let min_price = prices[0]
 
-for (let i = 0; i < n - 1; i++) {
-    let sellIdx = i + 1;
-    while (sellIdx < n) {
-        if (prices[sellIdx] - prices[i] > max) {
-            max = prices[sellIdx] - prices[i];
-        }
-        sellIdx++;
+for (let i = 0; i < n; i++) {
+    if (prices[i] < min_price) {
+        min_price = prices[i]
+    }
+    if (prices[i] - min_price > max) {
+        max = prices[sellIdx] - prices[i];
     }
 }
 console.log(max)
