@@ -11,7 +11,7 @@ for (let i = 0; i < n; i++) {
         min_price = prices[i]
     }
     if (prices[i] - min_price > max) {
-        max = prices[sellIdx] - prices[i];
+        max = prices[i] - min_price;
     }
 }
 console.log(max)
