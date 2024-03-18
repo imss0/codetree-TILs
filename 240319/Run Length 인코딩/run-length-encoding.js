@@ -1,5 +1,5 @@
 const fs = require('fs');
-const input = fs.readFileSync(0).toString();
+const input = fs.readFileSync(0).toString().trim();
 
 let currChar = input[0];
 let currCharCount = 1;
